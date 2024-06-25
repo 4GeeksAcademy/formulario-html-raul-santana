@@ -30,25 +30,41 @@
                 <div class="row">
                     <div class="col-5">
                         <div class="form-group mb-3">
-                            <label for="card_number">Tarjeta</label>
-                            <input type="text" class="form-control" name="card_number" placeholder="XXXXXXXXXXXXXXXXX" required>
-                            <div class="invalid-feedback">Por favor inserte el número de tarjeta</div>
+                            <label for="card_number"><strong>Número de tarjeta</strong></label>
+                            <input type="text" class="form-control" name="card_number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                            <div class="invalid-feedback">Por favor, inserte el número de tarjeta</div>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="form-group mb-3">
-                            <label for="cvc">CVC</label>
-                            <input type="text" class="form-control" name="cvc" placeholder="000" maxlength="3" required>
+                            <label for="cvc"><strong>CVV</strong></label>
+                            <input type="text" class="form-control" name="cvv" placeholder="000" maxlength="3" required>
                         </div>
                     </div>
                     <div class="col-4">
-                        <label for="amount">Cantidad</label>
+                        <label for="amount"><strong>Cantidad</strong></label>
                         <i class="fa-solid fa-euro-sign"></i>
                         <div class="d-flex">
-                            <input type="text" class="form-control" id="amount" placeholder="Cantidad" required>
+                            <input type="text" class="form-control" id="Cantidad" placeholder="Cantidad" required>
                         </div>
                     </div>
                 </div>
-    
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group mb-3">
+                            <label for="firstName1"><strong>Nombre</strong></label>
+                            <input type="text" class="form-control" name="nombre" required>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group mb-3">
+                            <label for="lastName1"><strong>Apellidos</strong></label>
+                            <input type="text" class="form-control" name="apellidos" required>
+                        </div>
+                    </div>
+                </div>
+
+                
 </body>
 </html>
