@@ -14,17 +14,41 @@
 </head>
 
 <body>
-    <div class="container p-5 justify-content-center ">
-
-        <div class="card">
+    <form action="">
+        <div class="card w-75 mt-3 mx-auto">
             <div class="card-header">
-                <h2>Formulario para compra online</h2>
+                <h5 class="card-title">Formulario de pago en línea</h5>
             </div>
 
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-danger" role="alert">Faltan algunos campos obligatorios</div>
+                    </div>
+                </div>
 
-            <div class="alert alert-danger alert-dismissible fade show my-4 m-3 fw-semibold" role="alert">
-                Faltan algunos campos obligatorios
-            </div>
+                <div class="row">
+                    <div class="col-5">
+                        <div class="form-group mb-3">
+                            <label for="card_number">Tarjeta</label>
+                            <input type="text" class="form-control" name="card_number" placeholder="XXXXXXXXXXXXXXXXX" required>
+                            <div class="invalid-feedback">Por favor inserte el número de tarjeta</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group mb-3">
+                            <label for="cvc">CVC</label>
+                            <input type="text" class="form-control" name="cvc" placeholder="000" maxlength="3" required>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <label for="amount">Cantidad</label>
+                        <i class="fa-solid fa-euro-sign"></i>
+                        <div class="d-flex">
+                            <input type="text" class="form-control" id="amount" placeholder="Cantidad" required>
+                        </div>
+                    </div>
+                </div>
     
 </body>
 </html>
