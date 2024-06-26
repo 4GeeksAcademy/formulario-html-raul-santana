@@ -14,57 +14,139 @@
 </head>
 
 <body>
-    <form action="">
-        <div class="card w-75 mt-3 mx-auto">
+    <div class="container p-5 justify-content-center ">
+
+        <div class="card">
             <div class="card-header">
-                <h5 class="card-title">Formulario de pago en línea</h5>
+                <h2>Formulario de pago en línea</h2>
             </div>
 
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="alert alert-danger" role="alert">Faltan algunos campos obligatorios</div>
-                    </div>
-                </div>
 
+            <div class="alert alert-danger alert-dismissible fade show my-4 m-3" role="alert">
+                Faltan algunos campos obligatorios
+            </div>
+
+            <form class="m-3">
                 <div class="row">
-                    <div class="col-5">
-                        <div class="form-group mb-3">
-                            <label for="card_number"><strong>Número de tarjeta</strong></label>
-                            <input type="text" class="form-control" name="card_number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
-                            <div class="invalid-feedback">Por favor, inserte el número de tarjeta</div>
+                    <div class="col mb-3">
+                        <label for="card" class="form-label"><strong>Tarjeta</strong></label>
+                        <div class="input-group">
+                            <input id="card" type="number" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX">
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="form-group mb-3">
-                            <label for="cvc"><strong>CVV</strong></label>
-                            <input type="text" class="form-control" name="cvv" placeholder="000" maxlength="3" required>
+
+                    <div class="col mb-3">
+                        <label for="cvc" class="form-label"><strong>CVV</strong></label>
+                        <div class="input-group">
+                            <input id="cvc" type="number" class="form-control" placeholder="000">
                         </div>
                     </div>
-                    <div class="col-4">
-                        <label for="amount"><strong>Cantidad</strong></label>
+
+                    <div class="col mb-3">
+                        <label for="amount" class="form-label"><strong>Cantidad</strong></label>
                         <i class="fa-solid fa-euro-sign"></i>
-                        <div class="d-flex">
-                            <input type="text" class="form-control" id="Cantidad" placeholder="Cantidad" required>
+                        <div class="input-group">
+                            <input id="amount" type="number" class="form-control" placeholder="Cantidad">
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-6">
-                        <div class="form-group mb-3">
-                            <label for="firstName1"><strong>Nombre</strong></label>
-                            <input type="text" class="form-control" name="nombre" required>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group mb-3">
-                            <label for="lastName1"><strong>Apellidos</strong></label>
-                            <input type="text" class="form-control" name="apellidos" required>
-                        </div>
-                    </div>
-                </div>
+                <fieldset>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="name" class="form-label"><strong>Nombre</strong></label>
+                            <div class="input-group">
+                                <input id="name" type="text" class="form-control">
 
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <label for="lastname" class="form-label"><strong>Apellidos</strong></label>
+                            <div class="input-group">
+                                <input id="lastname" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="city" class="form-label"><strong>Ciudad</strong></label>
+                            <div class="input-group">
+                                <input id="city" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="state" class="form-label"><strong>Provincia</strong></label>
+                            <select class="form-select" id="state">
+                                <option selected="" value="">Selecciona una provincia</option>
+                                <option value="1">Madrid</option>
+                            <option value="2">Barcelona</option>
+                            <option value="3">Sevilla</option>
+                            <option value="4">Málaga</option>
+                            <option value="5">Valencia</option>
+                            <option value="6">Ávila</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="postal" class="form-label"><strong>Código Postal</strong></label>
+                            <input type="number" class="form-control" id="postal">
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <p><strong>Aceptamos:</strong></p>
+
+                            <div class="col mb-3">
+                                <button type="button" class="btn btn-secondary">
+                                    <input id="mastercard" type="radio" name="card">
+                                    <label for="mastercard"><i class="fa-brands me-3 fa-cc-mastercard"></i></label>
+                                    <input id="visa" type="radio" name="card">
+                                    <label for="visa"><i class="fa-brands me-3 fa-cc-visa"></i></label>
+                                    <input id="club" type="radio" name="card">
+                                    <label for="club"><i class="fa-brands me-3 fa-cc-diners-club"></i></label>
+                                    <input id="club" type="radio" name="card">
+                                    <label for="club"><i class="fa-brands me-3 fa-cc-discover"></i></label>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="form-group mb-3">
+                                <label for="textarea1" class="form-label"><strong>Mensaje</strong></label>
+                                <textarea class="form-control" rows="3" name="textarea1" id="textarea1"></textarea>
+                                <p class="text-secondary mt-1">Añadir mensaje aquí.</p>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
                 
+            </form>
+         
+            <div class="card-footer text-body-secondary d-md-flex justify-content-md-end">
+                <button class="btn btn-secondary me-md-2" type="button">Cancelar</button>
+                <button class="btn btn-primary" type="button">Enviar</button>
+              </div>
+                    
+            </div>
+                  
+    </div>
+
+   
+
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
 </html>
